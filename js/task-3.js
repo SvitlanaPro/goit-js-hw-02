@@ -1,11 +1,13 @@
 function checkForSpam(message){
-    const message1 = message.toLowerCase();
-    console.log(message1);
-    return message1.includes ('spam' && 'sale');
 
-
+    const normalizedMessage = message.toLowerCase();
+    console.log(normalizedMessage);
     
+      return normalizedMessage.includes ('spam') || normalizedMessage.includes ('sale') ;
 }
+
+  
+
 
 console.log(checkForSpam("Latest technology news")); // false
 console.log(checkForSpam("JavaScript weekly newsletter")); // false
@@ -14,3 +16,4 @@ console.log(checkForSpam("Amazing SalE, only tonight!")); // true
 console.log(checkForSpam("Trust me, this is not a spam message")); // true
 console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!")); // true
 console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
+
