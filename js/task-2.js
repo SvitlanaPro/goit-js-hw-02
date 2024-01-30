@@ -3,20 +3,10 @@ function formatMessage(message, maxLength){
     if (message.length <= maxLength){
         return  message;
     } else{
-        return  message + "...";
+        return `${message.slice(0, maxLength)}...`;
     }
  }
-//     console.log (message);
-//     console.log (message.length);
-//     let messageNew;
-//     console.log (messageNew === message);
-//     //   console.log (messageNew === message.length);
-//     if (message.length <= maxLength){
-//         messageNew === message;
-//     } else{
-//         messageNew === message + "...";
-//     }
-//     return messageNew;
+
 
 
 console.log(formatMessage("Curabitur ligula sapien", 16)); // "Curabitur ligula..."
